@@ -1,7 +1,5 @@
 package com.athenafriday.recyclerview_with_countries.data.model
 
-
-
 import com.google.gson.annotations.SerializedName
 
 data class CurrencyModel(

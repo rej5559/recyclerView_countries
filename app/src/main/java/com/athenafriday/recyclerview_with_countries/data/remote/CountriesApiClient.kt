@@ -1,11 +1,15 @@
 package com.athenafriday.recyclerview_with_countries.data.remote
 
+import com.athenafriday.recyclerview_with_countries.R
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.*
+import com.athenafriday.recyclerview_with_countries.BuildConfig
+
 
 object CountriesApiClient {
+
     val logging = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
@@ -16,7 +20,7 @@ object CountriesApiClient {
 
     val api: CountriesApiService by lazy {
         Retrofit.Builder()
-            .baseUrl("https://gist.githubusercontent.com/")
+            .baseUrl(BuildConfig.BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
