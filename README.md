@@ -34,7 +34,7 @@ This is a simple Android app built using MVVM architecture, displaying a list of
 ## Getting Started
 
 1. Clone the repo
-git clone https://github.com/your-username/countries-recyclerview.git
+git clone https://github.com/rej5559/recyclerView_countries
 2. Open in Android Studio
 3. Build & Run
 Make sure you're connected to the internet to allow API access.
