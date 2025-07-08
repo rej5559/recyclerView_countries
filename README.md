@@ -6,7 +6,7 @@ This is a simple Android app built using MVVM architecture, displaying a list of
 
 ## Demo
 
-> I'll add the demo link here when it's done
+<video src="https://github.com/user-attachments/assets/55eea200-6063-4ad3-a325-f28cbfc00bf1"></video>
 
 ---
 
@@ -20,7 +20,7 @@ This is a simple Android app built using MVVM architecture, displaying a list of
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 - **Kotlin**
 - **MVVM**
@@ -31,7 +31,7 @@ This is a simple Android app built using MVVM architecture, displaying a list of
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 1. Clone the repo
 git clone https://github.com/your-username/countries-recyclerview.git

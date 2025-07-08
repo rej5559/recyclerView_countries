@@ -5,8 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.athenafriday.recyclerview_with_countries.data.model.CountriesModel
-import com.athenafriday.recyclerview_with_countries.data.remote.CountriesApiClient
 import com.athenafriday.recyclerview_with_countries.data.repository.CountriesRepository
 import com.athenafriday.recyclerview_with_countries.domain.usecase.GetCountriesUseCase
 import com.athenafriday.recyclerview_with_countries.presentation.state.CountriesUiState
@@ -21,6 +19,10 @@ class CountriesViewModel : ViewModel() {
     val uiState: LiveData<CountriesUiState> = _uiState
 
     fun fetchCountries() {
+        if (_uiState.value is CountriesUiState.Success || _uiState.value is CountriesUiState.Error) {
+            return
+        }
+
         _uiState.value = CountriesUiState.Loading
         viewModelScope.launch {
             try {
